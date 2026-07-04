@@ -1,0 +1,33 @@
+paths:
+  m17_tools: "C:\\M17"
+  sox: "C:\\Users\\local_user\\scoop\\apps\\sox\\current\\sox.exe"
+  ffplay: "ffplay.exe"
+
+callsign: HA2ZB
+destination: ALL
+
+ptt:
+  com_port: COM8    #RTS pin is controlled
+
+audio:
+  rx_input:
+    device_contains: "Mikrofon (2- USB PnP Sound Device)"
+    level_percent: 88.0
+
+  rx_output:
+    waveaudio_device: 0
+    description: "Fejhallgató (Realtek Audio)"
+
+  tx_microphone:
+    device_contains: "Mikrofon tömb"
+    level_percent: 83.7
+
+  tx_output:
+    device_contains: "Hangszórók (2- USB PnP Sound Device)"
+    level_percent: 55.0
+    waveaudio_device: 1
+
+radio:
+  model: FT-817
+  pkt_mic_menu: 39
+  pkt_mic_value: 50
