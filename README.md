@@ -189,6 +189,12 @@ Current validation status:
 -   Validated with **Yaesu FT-817** (expected to work with FT-818, but
     not yet fully verified).
 -   Tested with **DigiRig Mobile** using the **9600 bps DATA** cable.
+- 	**Important:** The FT-817 9600 bps DATA OUT produces an **inverted
+	discriminator signal**. The official `m17-demod` expects the opposite
+	polarity, therefore the received baseband must be inverted (e.g. using
+	`SoX vol -1`) before demodulation. This was experimentally verified
+	during over-the-air testing and appears to be largely undocumented in
+	existing FT-817/M17 integration guides.
 -   The **20 dB DigiRig attenuator** (or equivalent external 100 kΩ
     attenuation) is required for reliable RX operation.
 -   Windows audio device names may differ between systems and must be
